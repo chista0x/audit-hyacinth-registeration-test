@@ -15,8 +15,6 @@ contract TestErrorNFT is ERC721, Ownable {
 
     constructor() ERC721("ErrorNFT", "ENFT") {}
 
-    
-
     function mint(address to) public {
         _safeMint(to, _tokenIdCounter.current());
         _tokenIdCounter.increment();
@@ -31,10 +29,10 @@ contract TestErrorNFT is ERC721, Ownable {
     }
     totalSupply += amount;
 
-
     function setUserMintLimit(uint256 newLimit) public onlyOwner {
         maxMintPerUser = newLimit;
     }
+
 
     function _baseURI() internal view override returns (string memory) {
         return "ipfs://";

@@ -65,7 +65,7 @@ There is no check to enforce the `maxMintPerUser` limit in the `mint` or `batchM
 
 <details><summary>2 Found Instances</summary>
 
-- Found in src/TestErrorNFT.sol [Line: 18](src\TestErrorNFT.sol#L18)
+- Found in src/TestErrorNFT.sol [Line: 18](src/TestErrorNFT.sol#L18)
 
     ```solidity
         function mint(address to) public {
@@ -78,7 +78,7 @@ There is no check to enforce the `maxMintPerUser` limit in the `mint` or `batchM
         }
     ```
 
-- Found in src/TestErrorNFT.sol [Line: 25](src\TestErrorNFT.sol#L25)
+- Found in src/TestErrorNFT.sol [Line: 25](src/TestErrorNFT.sol#L25)
 
     ```solidity
         function batchMint(address to, uint256 amount) public {
@@ -99,7 +99,7 @@ The contract could benefit from using checks-effects-interactions pattern for sa
 
 <details><summary>1 Found Instance</summary>
 
-- Found in src/TestErrorNFT.sol [Line: 18](src\TestErrorNFT.sol#L18)
+- Found in src/TestErrorNFT.sol [Line: 18](src/TestErrorNFT.sol#L18)
 
 </details>
 
@@ -111,7 +111,7 @@ No arguments were passed to the base constructor. Specify the arguments.
 
 <details><summary>1 Found Instance</summary>
 
-- Found in src/TestErrorNFT.sol [Line: 16](src\TestErrorNFT.sol#L16)
+- Found in src/TestErrorNFT.sol [Line: 16](src/TestErrorNFT.sol#L16)
 
     ```solidity
     TypeError: No arguments passed to the base constructor. Specify the arguments
@@ -134,7 +134,7 @@ The line `totalSupply += amount;` should be inside the `batchMint` function.
 
 <details><summary>1 Found Instance</summary>
 
-- Found in src/TestErrorNFT.sol [Line: 30](src\TestErrorNFT.sol#L30)
+- Found in src/TestErrorNFT.sol [Line: 30](src/TestErrorNFT.sol#L30)
 
     ```solidity
         function batchMint(address to, uint256 amount) public {
@@ -154,13 +154,13 @@ The `batchMint` and `setUserMintLimit` functions should ideally be `external` ba
 
 <details><summary>2 Found Instances</summary>
 
-- Found in src/TestErrorNFT.sol [Line: 25](src\TestErrorNFT.sol#L25)
+- Found in src/TestErrorNFT.sol [Line: 25](src/TestErrorNFT.sol#L25)
 
     ```solidity
     function batchMint(address to, uint256 amount) external
     ```
 
-- Found in src/TestErrorNFT.sol [Line: 32](src\TestErrorNFT.sol#L32)
+- Found in src/TestErrorNFT.sol [Line: 32](src/TestErrorNFT.sol#L32)
 
     ```solidity
     function setUserMintLimit(uint256 newLimit) external onlyOwner
@@ -174,8 +174,8 @@ The `totalSupply` is incremented both in the `mint` function and in the `batchMi
 
 <details><summary>2 Found Instances</summary>
 
-- Found in src/TestErrorNFT.sol [Line: 24](src\TestErrorNFT.sol#L24)
-- Found in src/TestErrorNFT.sol [Line: 32](src\TestErrorNFT.sol#L32)
+- Found in src/TestErrorNFT.sol [Line: 22](src/TestErrorNFT.sol#L22)
+- Found in src/TestErrorNFT.sol [Line: 30](src/TestErrorNFT.sol#L30)
 
     Recommended: we can remove `totalSupply` variable and use a counter instead.
 
@@ -195,7 +195,7 @@ SPDX license identifiers should be added to the top of contract files.
 
 <details><summary>1 Found Instance</summary>
 
-- Found in src/TestErrorNFT.sol [Line: 0](src\TestErrorNFT.sol#L0)
+- Found in src/TestErrorNFT.sol [Line: 0](src/TestErrorNFT.sol#L0)
 
     ```solidity
     // SPDX-License-Identifier: MIT
@@ -209,7 +209,7 @@ Instead of `Wildcard Import`, consider using `Named Import`.
 
 <details><summary>3 Found Instances</summary>
 
-- Found in src/TestErrorNFT.sol [Line: 3](src\TestErrorNFT.sol#L3)
+- Found in src/TestErrorNFT.sol [Line: 3](src/TestErrorNFT.sol#L3)
 
     ```solidity
     import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -221,7 +221,7 @@ Instead of `Wildcard Import`, consider using `Named Import`.
     import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
     ```
 
-- Found in src/TestErrorNFT.sol [Line: 5](src\TestErrorNFT.sol#L5)
+- Found in src/TestErrorNFT.sol [Line: 5](src/TestErrorNFT.sol#L5)
 
     ```solidity
     import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
